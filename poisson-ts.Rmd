@@ -8,8 +8,8 @@ output: pdf_document
 ```{r setup, include=FALSE}
 #import data
 library(readr)
-data <-  read.csv("/Volumes/STACY JIANG/DS_Fall2017/DATS6450/Assign3-Project/Beijing_PM2_5_Sept20_Oct19.csv")
-#data <- read_csv("~/Desktop/School/Assign3/Beijing_PM2_5_Sept20_Oct19.csv")
+data <-  read.csv("/Beijing_PM2_5_Sept20_Oct19.csv")
+
 library(plyr)
 library(zoo)
 smo_data <- ddply(data, .(month), transform, pm2.5=na.approx(pm2.5, rule=2))
